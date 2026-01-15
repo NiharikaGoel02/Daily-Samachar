@@ -1,50 +1,105 @@
-# DailySamachar: A React News Website
+# 📰 DailySamachar – A React News Website
 
-DailySamachar is a simple, modern, and responsive news website built with **React** that fetches the latest news articles using the **News API**. The website allows users to view top headlines from various categories, including general, business, technology, sports, etc.
+**DailySamachar** is a modern, responsive news web application built with **React (class-based components)**. It fetches real-time news from the **GNews API** and allows users to browse top Indian headlines across multiple categories, search for news by keywords, and enjoy smooth infinite scrolling — all **without using any backend**.
 
-## Features
+---
 
-- Displays the latest top headlines from various categories.
-- Real-time fetching of news articles using the News API.
-- Mobile-friendly, responsive design.
-- Search functionality to find news articles by keyword.
-- Infinite scrolling for smooth browsing.
+## 🚀 Features
 
-## Technologies Used
+* 🇮🇳 **Latest Indian News** from multiple categories:
 
-- React.js: For building the user interface.
-- News API: To fetch the latest news articles.
-- Bootstrap: For responsive design and layout.
-- React Infinite Scroll: For fetching more news articles as the user scrolls.
-- CSS: For custom styling and responsive design.
+  * General, Business, Technology, Sports, Health, Science, Entertainment
+* 🔍 **Search Functionality**
 
-## Getting Started
+  * Search news articles by keyword directly from the navbar
+* ♾️ **Infinite Scrolling**
 
-### Prerequisites
+  * Automatically loads more news as you scroll
+* ⏳ **Top Loading Bar & Spinner**
 
-To run this project locally, ensure you have the following installed:
+  * Visual feedback while news is being fetched
+* 📱 **Fully Responsive UI**
 
-- [Node.js](https://nodejs.org/en/) (version 12.x or higher)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+  * Optimized for desktop and mobile screens
+* 🔗 **Read Full Article**
 
-### Add Your News API Key
+  * Redirects to the original news source
 
-To fetch news, you'll need to create a free account on [News API](https://newsapi.org/) and obtain an API key.
+---
 
-1. Create an `.env` file in the root of the project.
-2. Add the following line to the `.env` file with your API key:
-   REACT_APP_API_KEY=your-news-api-key
+## 🛠️ Technologies Used
 
-### Run the Application
+* **React.js** (Class-based components)
+* **React Router DOM** – for category routing
+* **GNews API** – for fetching real-time news
+* **Bootstrap 5** – responsive layout and styling
+* **React Infinite Scroll Component**
+* **React Top Loading Bar**
+* **CSS** – custom styling
 
-To start the development server, run:
+---
 
+## ⚙️ Getting Started
+
+### 📋 Prerequisites
+
+Make sure you have the following installed:
+
+* [Node.js](https://nodejs.org/) (v12 or higher)
+* npm (comes with Node.js)
+
+---
+
+## 🔑 Add Your GNews API Key
+
+DailySamachar uses the **GNews API** (free plan supported).
+
+1. Create a free account at
+   👉 [https://gnews.io/](https://gnews.io/)
+2. Generate your API key.
+3. Create a `.env` file in the project root.
+4. Add the following line:
+
+```env
+REACT_APP_GNEWS_API_KEY=your-gnews-api-key
+```
+
+⚠️ **Important:** Restart the development server after adding the `.env` file.
+
+---
+
+## ▶️ Run the Application
+
+Install dependencies and start the app:
+
+```bash
+npm install
 npm start
-This will start the React app, and you can view it at `http://localhost:3000/` in your browser.
+```
 
-## How It Works
+Open your browser and visit:
 
-1. The app fetches news articles from the News API based on the selected category (e.g., general, business, technology).
-2. The data is displayed in a responsive grid with infinite scrolling.
-3. Users can search for specific topics, and the results will dynamically update without needing to reload the page.
+```
+http://localhost:3000
+```
+
+---
+
+## 🧠 How It Works
+
+1. On page load, the app fetches **top headlines from India** using the GNews API.
+2. Category navigation updates news using **React Router**.
+3. Searching from the navbar dynamically updates results without page reload.
+4. Infinite scrolling loads additional articles as the user scrolls.
+5. A loading bar and spinner provide real-time feedback during API calls.
+
+---
+
+## 📌 Notes
+
+* No backend is used — the app directly consumes the public GNews API.
+* API usage limits depend on the GNews free plan.
+* Designed primarily for learning React, API integration, and UI/UX best practices.
+
+---
 
